@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60A26EF4CCD99E2F84E6BC2C /* Pods_RLShowRoom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB559EA5060C5D622359D9D /* Pods_RLShowRoom.framework */; };
 		69E8C7CA1D8C3DC50092F741 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E8C7C91D8C3DC50092F741 /* AppDelegate.swift */; };
 		69E8C7CC1D8C3DC50092F741 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E8C7CB1D8C3DC50092F741 /* ViewController.swift */; };
 		69E8C7CF1D8C3DC50092F741 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E8C7CD1D8C3DC50092F741 /* Main.storyboard */; };
 		69E8C7D11D8C3DC50092F741 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69E8C7D01D8C3DC50092F741 /* Assets.xcassets */; };
 		69E8C7D41D8C3DC50092F741 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E8C7D21D8C3DC50092F741 /* LaunchScreen.storyboard */; };
 		69E8C7DF1D8C3DC50092F741 /* RLShowRoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E8C7DE1D8C3DC50092F741 /* RLShowRoomTests.swift */; };
+		69E8C7EE1D902EB20092F741 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69E8C7ED1D902EB20092F741 /* GoogleService-Info.plist */; };
+		755A1554B84BD2F970FBFBDE /* Pods_RLShowRoomTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB0371E62AB7D64A00CEB65 /* Pods_RLShowRoomTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30AB5384D4CB3D1B92488911 /* Pods-RLShowRoom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RLShowRoom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RLShowRoom/Pods-RLShowRoom.debug.xcconfig"; sourceTree = "<group>"; };
+		5DB0371E62AB7D64A00CEB65 /* Pods_RLShowRoomTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RLShowRoomTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E8C7C61D8C3DC50092F741 /* RLShowRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RLShowRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E8C7C91D8C3DC50092F741 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69E8C7CB1D8C3DC50092F741 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +45,11 @@
 		69E8C7EA1D8C3E070092F741 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		69E8C7EB1D8C3E100092F741 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
 		69E8C7EC1D8C3E100092F741 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		69E8C7ED1D902EB20092F741 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		82F98E88B1FF45D2106240ED /* Pods-RLShowRoomTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RLShowRoomTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RLShowRoomTests/Pods-RLShowRoomTests.release.xcconfig"; sourceTree = "<group>"; };
+		8B9AEEE64189823C66D4DBEC /* Pods-RLShowRoomTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RLShowRoomTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RLShowRoomTests/Pods-RLShowRoomTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DC517E23E8C5CF9C7372F59C /* Pods-RLShowRoom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RLShowRoom.release.xcconfig"; path = "Pods/Target Support Files/Pods-RLShowRoom/Pods-RLShowRoom.release.xcconfig"; sourceTree = "<group>"; };
+		EEB559EA5060C5D622359D9D /* Pods_RLShowRoom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RLShowRoom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60A26EF4CCD99E2F84E6BC2C /* Pods_RLShowRoom.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +65,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				755A1554B84BD2F970FBFBDE /* Pods_RLShowRoomTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30EC67B25CAC140CD6A88552 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				30AB5384D4CB3D1B92488911 /* Pods-RLShowRoom.debug.xcconfig */,
+				DC517E23E8C5CF9C7372F59C /* Pods-RLShowRoom.release.xcconfig */,
+				8B9AEEE64189823C66D4DBEC /* Pods-RLShowRoomTests.debug.xcconfig */,
+				82F98E88B1FF45D2106240ED /* Pods-RLShowRoomTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		69E8C7BD1D8C3DC50092F741 = {
 			isa = PBXGroup;
 			children = (
 				69E8C7C81D8C3DC50092F741 /* RLShowRoom */,
 				69E8C7DD1D8C3DC50092F741 /* RLShowRoomTests */,
 				69E8C7C71D8C3DC50092F741 /* Products */,
+				30EC67B25CAC140CD6A88552 /* Pods */,
+				7BE9705047E219E64378DD7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +106,7 @@
 		69E8C7C81D8C3DC50092F741 /* RLShowRoom */ = {
 			isa = PBXGroup;
 			children = (
+				69E8C7ED1D902EB20092F741 /* GoogleService-Info.plist */,
 				69E8C7C91D8C3DC50092F741 /* AppDelegate.swift */,
 				69E8C7CB1D8C3DC50092F741 /* ViewController.swift */,
 				69E8C7CD1D8C3DC50092F741 /* Main.storyboard */,
@@ -100,6 +126,15 @@
 			path = RLShowRoomTests;
 			sourceTree = "<group>";
 		};
+		7BE9705047E219E64378DD7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEB559EA5060C5D622359D9D /* Pods_RLShowRoom.framework */,
+				5DB0371E62AB7D64A00CEB65 /* Pods_RLShowRoomTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69E8C7E31D8C3DC50092F741 /* Build configuration list for PBXNativeTarget "RLShowRoom" */;
 			buildPhases = (
+				6F1099A0AD5FD18BBFB37692 /* [CP] Check Pods Manifest.lock */,
 				69E8C7C21D8C3DC50092F741 /* Sources */,
 				69E8C7C31D8C3DC50092F741 /* Frameworks */,
 				69E8C7C41D8C3DC50092F741 /* Resources */,
+				20480B32A152781B40C975C3 /* [CP] Embed Pods Frameworks */,
+				7346C2097AC79B071E90F9A3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69E8C7E61D8C3DC50092F741 /* Build configuration list for PBXNativeTarget "RLShowRoomTests" */;
 			buildPhases = (
+				07630C0172E607F747AE0BCC /* [CP] Check Pods Manifest.lock */,
 				69E8C7D61D8C3DC50092F741 /* Sources */,
 				69E8C7D71D8C3DC50092F741 /* Frameworks */,
 				69E8C7D81D8C3DC50092F741 /* Resources */,
+				84B286184FAB8F28F84D5553 /* [CP] Embed Pods Frameworks */,
+				F48F76E2C707E488F975E28A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -184,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69E8C7D41D8C3DC50092F741 /* LaunchScreen.storyboard in Resources */,
+				69E8C7EE1D902EB20092F741 /* GoogleService-Info.plist in Resources */,
 				69E8C7D11D8C3DC50092F741 /* Assets.xcassets in Resources */,
 				69E8C7CF1D8C3DC50092F741 /* Main.storyboard in Resources */,
 			);
@@ -197,6 +239,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07630C0172E607F747AE0BCC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		20480B32A152781B40C975C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RLShowRoom/Pods-RLShowRoom-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F1099A0AD5FD18BBFB37692 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7346C2097AC79B071E90F9A3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RLShowRoom/Pods-RLShowRoom-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84B286184FAB8F28F84D5553 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RLShowRoomTests/Pods-RLShowRoomTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F48F76E2C707E488F975E28A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RLShowRoomTests/Pods-RLShowRoomTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		69E8C7C21D8C3DC50092F741 /* Sources */ = {
@@ -347,6 +482,7 @@
 		};
 		69E8C7E41D8C3DC50092F741 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30AB5384D4CB3D1B92488911 /* Pods-RLShowRoom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RLShowRoom/Info.plist;
@@ -359,6 +495,7 @@
 		};
 		69E8C7E51D8C3DC50092F741 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC517E23E8C5CF9C7372F59C /* Pods-RLShowRoom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RLShowRoom/Info.plist;
@@ -371,6 +508,7 @@
 		};
 		69E8C7E71D8C3DC50092F741 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B9AEEE64189823C66D4DBEC /* Pods-RLShowRoomTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -385,6 +523,7 @@
 		};
 		69E8C7E81D8C3DC50092F741 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82F98E88B1FF45D2106240ED /* Pods-RLShowRoomTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
