@@ -3,27 +3,162 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Exo2-LightCondensed.otf">
+            <string>Exo2-LightCondensed</string>
+        </array>
+        <array key="Exo2-ThinCondensed.otf">
+            <string>Exo2-ThinCondensed</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RLShowRoom" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="RLShowRoom" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="pSC-Pg-8R9" userLabel="Global Stack View">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wCR-yS-iNS" userLabel="Input Stack View">
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wcP-0F-dmD" userLabel="Text Fields Stack View">
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please input user e-mail" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="cJI-eB-LDL">
+                                                        <color key="backgroundColor" red="0.84313725490196079" green="0.85490196078431369" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="Exo2-LightCondensed" family="Exo 2" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please input password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="QNU-lH-OpK">
+                                                        <color key="backgroundColor" red="0.83137254901960789" green="0.83921568627450982" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="Exo2-LightCondensed" family="Exo 2" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="XzR-nw-dti" userLabel="Button Stack View">
+                                        <subviews>
+                                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DM3-N4-aPo">
+                                                <fontDescription key="fontDescription" name="Exo2-LightCondensed" family="Exo 2" pointSize="20"/>
+                                                <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                                <state key="normal" title="Sign up">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PjX-jI-wNa">
+                                                <fontDescription key="fontDescription" name="Exo2-LightCondensed" family="Exo 2" pointSize="20"/>
+                                                <state key="normal" title="Login">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
+                                                        <integer key="value" value="100"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="VQU-9M-pcj" kind="show" id="FXM-OL-bWa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="DM3-N4-aPo" firstAttribute="width" secondItem="PjX-jI-wNa" secondAttribute="width" id="AyG-T4-uZc"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="center" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="u8f-hR-rRs" userLabel="SignIn Stack View">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfa-lS-k2m">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="adj-dq-euy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Exo2-ThinCondensed" family="Exo 2" pointSize="17"/>
+                                        <state key="normal" title="Sign in Facebook" image="facebook">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or sign in with social account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enG-Mb-w7A">
+                                        <fontDescription key="fontDescription" name="Exo2-ThinCondensed" family="Exo 2" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOz-vy-cvd">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="HgL-xp-BEB"/>
+                                            <constraint firstAttribute="width" constant="35" id="acb-bU-rc6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Exo2-ThinCondensed" family="Exo 2" pointSize="17"/>
+                                        <state key="normal" title="Sign in Google" image="google"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="YOz-vy-cvd" firstAttribute="leading" secondItem="enG-Mb-w7A" secondAttribute="trailing" constant="8" id="7VI-CG-bVg"/>
+                                    <constraint firstItem="enG-Mb-w7A" firstAttribute="leading" secondItem="gfa-lS-k2m" secondAttribute="trailing" constant="8" id="N7u-te-Wks"/>
+                                    <constraint firstAttribute="height" constant="35" id="yjd-F7-zf4"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDn-zA-Iw7">
+                                <fontDescription key="fontDescription" name="Exo2-LightCondensed" family="Exo 2" pointSize="19"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="aw8-MM-l6D"/>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HDn-zA-Iw7" secondAttribute="bottom" constant="20" id="36t-lW-SMa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HDn-zA-Iw7" secondAttribute="trailing" id="3lQ-Ae-nqM"/>
+                            <constraint firstItem="pSC-Pg-8R9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4FN-R0-1zD"/>
+                            <constraint firstItem="HDn-zA-Iw7" firstAttribute="top" secondItem="u8f-hR-rRs" secondAttribute="bottom" constant="8" id="8S9-lt-T4l"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="pSC-Pg-8R9" secondAttribute="leading" constant="-10" id="K7f-oc-3Cj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pSC-Pg-8R9" secondAttribute="trailing" constant="10" id="Moo-BD-kwH"/>
+                            <constraint firstItem="u8f-hR-rRs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="pSC-Pg-8R9" secondAttribute="bottom" constant="8" id="T2P-6B-Mnu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="u8f-hR-rRs" secondAttribute="trailing" constant="10" id="WuL-rb-piF"/>
+                            <constraint firstItem="u8f-hR-rRs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Yea-rD-cTJ"/>
+                            <constraint firstItem="aw8-MM-l6D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="cRg-Zh-Cfv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aw8-MM-l6D" secondAttribute="trailing" id="fDl-9p-73x"/>
+                            <constraint firstItem="aw8-MM-l6D" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="giv-tc-Y0z"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="HDn-zA-Iw7" secondAttribute="leading" id="iiH-Ic-7gS"/>
+                            <constraint firstItem="pSC-Pg-8R9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mvG-aV-ZG5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tfEmail" destination="cJI-eB-LDL" id="LvD-Rc-9RN"/>
+                        <outlet property="tfPassword" destination="QNU-lH-OpK" id="w66-94-9wd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133.75" y="135"/>
         </scene>
-        <!--View Controller-->
+        <!--Groups-->
         <scene sceneID="Xwc-sc-4V9">
             <objects>
                 <viewController id="wnp-UP-M4O" sceneMemberID="viewController">
@@ -32,26 +167,32 @@
                         <viewControllerLayoutGuide type="bottom" id="1DB-Ei-MEv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="J3f-IX-FWc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="SzQ-09-jar"/>
+                    <navigationItem key="navigationItem" title="Groups" id="SzQ-09-jar">
+                        <barButtonItem key="backBarButtonItem" title="Login" id="5gw-XC-iOi"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ld-Bn-4mS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1962.4000000000001" y="104.7976011994003"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Groups-->
         <scene sceneID="jyW-CX-ghP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VQU-9M-pcj" sceneMemberID="viewController">
+                <navigationController title="Groups" automaticallyAdjustsScrollViewInsets="NO" id="VQU-9M-pcj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AL5-JN-BTi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="NxL-TJ-vcL">
+                        <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="wnp-UP-M4O" kind="relationship" relationship="rootViewController" id="WKi-jc-KeS"/>
                     </connections>
@@ -61,4 +202,9 @@
             <point key="canvasLocation" x="1023.2" y="104.7976011994003"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="facebook" width="57" height="57"/>
+        <image name="google" width="57" height="57"/>
+        <image name="logo" width="750" height="51"/>
+    </resources>
 </document>

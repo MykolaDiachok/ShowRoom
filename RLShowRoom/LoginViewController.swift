@@ -7,12 +7,23 @@
 //
 
 import UIKit
+import Firebase
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
+    @IBOutlet weak var tfEmail: UITextField!
+    @IBOutlet weak var tfPassword: UITextField!
     //test
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        self.tfEmail.setLeftImage(imageName: "mail")
+        
+        self.tfPassword.setLeftImage(imageName: "password")
+        
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
