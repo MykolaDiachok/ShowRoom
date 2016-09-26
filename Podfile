@@ -9,12 +9,13 @@ target 'RLShowRoom' do
   pod 'Firebase', '>= 2.5.1'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-  pod 'Google/SignIn'
   pod 'Firebase/Crash'
   pod 'Firebase/Database'
   pod 'Firebase/Messaging'
   pod 'Firebase/Storage'
-
+  pod 'FBSDKLoginKit', '~> 4.15'
+  pod 'FBSDKCoreKit', '~> 4.15'
+  pod 'GoogleSignIn'
 
 
   target 'RLShowRoomTests' do

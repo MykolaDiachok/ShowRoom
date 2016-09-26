@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -24,7 +24,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="pSC-Pg-8R9" userLabel="Global Stack View">
@@ -33,17 +33,25 @@
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wcP-0F-dmD" userLabel="Text Fields Stack View">
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please input user e-mail" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="cJI-eB-LDL">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please input user e-mail" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="cJI-eB-LDL">
+                                                        <frame key="frameInset" width="420" height="25"/>
                                                         <color key="backgroundColor" red="0.84313725490196079" green="0.85490196078431369" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="Exo2-LightCondensed" family="Exo 2" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="3fy-4k-Mpv"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please input password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="QNU-lH-OpK">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please input password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="QNU-lH-OpK">
+                                                        <frame key="frameInset" minY="35" width="420" height="30"/>
                                                         <color key="backgroundColor" red="0.83137254901960789" green="0.83921568627450982" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="Exo2-LightCondensed" family="Exo 2" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="M0t-1m-RUg"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -57,6 +65,9 @@
                                                 <state key="normal" title="Sign up">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btnEmailSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iCJ-fq-O2L"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PjX-jI-wNa">
                                                 <fontDescription key="fontDescription" name="Exo2-LightCondensed" family="Exo 2" pointSize="20"/>
@@ -70,6 +81,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="onClickbtnEmailSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KMZ-EG-KwT"/>
                                                     <segue destination="VQU-9M-pcj" kind="show" id="FXM-OL-bWa"/>
                                                 </connections>
                                             </button>
@@ -96,6 +108,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="OnClickbtnFaceBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rhD-rP-Jv3"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or sign in with social account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enG-Mb-w7A">
                                         <fontDescription key="fontDescription" name="Exo2-ThinCondensed" family="Exo 2" pointSize="17"/>
@@ -115,6 +130,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onClickbtnGoogleSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ET8-lI-437"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -128,6 +146,9 @@
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onClickbtnLogOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n51-gi-W8B"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="aw8-MM-l6D"/>
                         </subviews>
@@ -150,6 +171,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnEmailLogin" destination="PjX-jI-wNa" id="s6B-t4-N0j"/>
+                        <outlet property="btnEmailSignUp" destination="DM3-N4-aPo" id="5lF-nZ-pjR"/>
+                        <outlet property="btnFaceBookSignIn" destination="gfa-lS-k2m" id="4Ld-EF-cff"/>
+                        <outlet property="btnGoogleSignIn" destination="YOz-vy-cvd" id="AqM-t7-zqE"/>
+                        <outlet property="btnLogOut" destination="HDn-zA-Iw7" id="WXZ-cT-d4f"/>
                         <outlet property="tfEmail" destination="cJI-eB-LDL" id="LvD-Rc-9RN"/>
                         <outlet property="tfPassword" destination="QNU-lH-OpK" id="w66-94-9wd"/>
                     </connections>
@@ -167,7 +193,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1DB-Ei-MEv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="J3f-IX-FWc">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -184,7 +210,7 @@
             <objects>
                 <navigationController title="Groups" automaticallyAdjustsScrollViewInsets="NO" id="VQU-9M-pcj" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AL5-JN-BTi">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="AL5-JN-BTi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

@@ -21,3 +21,52 @@ extension UITextField{
         self.contentMode = .scaleAspectFit
     }
 }
+//UITextViewDelegate
+extension UIViewController {
+    
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    
+    func animateViewMoving (up:Bool, moveValue :CGFloat) {
+        let movementDuration:TimeInterval = 0.3
+        let movement:CGFloat = ( up ? -moveValue : moveValue)
+        UIView.beginAnimations( "animateView", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(movementDuration )
+        self.view.frame = self.view.frame.offsetBy(dx: 0,  dy: movement)
+        UIView.commitAnimations()
+    }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        
+        if range.length + range.location > (textField.text?.characters.count)! {
+            return false
+        }
+        
+        let newLength = (textField.text?.characters.count)! + string.characters.count - range.length
+        return newLength <= 30
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        //currentResponder = textField
+        animateViewMoving(up: true, moveValue: 100)
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        textField.resignFirstResponder()
+        animateViewMoving(up: false, moveValue: 100)
+    }
+    
+}

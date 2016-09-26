@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "luminous-inferno-5412",
+  "private_key_id": "0f6c545de261029d14cd01bb947f218782a4651b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC68yaebAAcIxYR\n13l99Dr1RE+QWiDgTUeaU+/WEIZi7lLLKkYHTN4w8V0QjE+P+xzripwa1K1rRcYL\nsD17vd0mULbTzgEHQd0sXSRh24IvDMeNtMia2/gKtLyFeiP8kXhL80lGyj4ylxYo\ntXFSmpS3qGQ5nsRMjveso1EH6RGJUvoFYTXlaNpTkFyMNtoDOvfiNFicB04iCjlX\ndrI3eOhTl22q9UIyy3cLjFAnCiUPARWgQPg2/3PeFMW3qztxovj7D6dCOBqjRngK\n2KOLUCZG71O2jeEb2CGPZiYzs6crT9JtGsk7meHAY/isRRWS3o+WK5aCgjixCCvB\nw47G9uyFAgMBAAECggEBALRc+hlFoSWERDqaZEA8bNVMPmbKTYWZiUc/S9h+wOiZ\nfY89DarlYkhd1KeuduQ2JMSqScko/tbLzjJgqjDEEKRyorDdwug5hyTSB9PRb1vt\nPGlezVt6dWf+zxMHr8hwoFrGMR/25uLwGRTVWKuVL32xHGDq5//kvtb0Ca1UEvMk\nTrBj0k1+8GFGkcEJ4VgGRri21yfioWdd5b00UBCBuUPfRwea3EXuhFHHANx78qwf\nFdl1VOrD/NNpnqoh4GQTkYVG6gCqsJC0Tn0AfY01Wjy5MwDNMhWWww8eowktaP2M\nNTyGlbm81LyS5fOxN07Rnw1WoLqn+UTBRcGjjWcOOQECgYEA8P7DvM6wPmxbmJ6J\nrFjga9JB89L9u0sYB84gA8XC+/CPDKUJI2Wrc7GXD5HlVCwjqyj71P0AdEGlWI9b\nxSdobAFLRVSeji+9oX4EMwEfbeEM23/Mb7vRZepUvxHVEs9ECDZoURj8E/CTigfG\nPWVrvXbnjWDuXIVY8AgNcOAPHbECgYEAxpb0ROsNrPS7xhWAmV+AE6uLpp/k2n75\nyN6ZTdHCEA8Kmio1X1YoqyJUZ89Qcx1jR1ondUWWmtiTLWW4k28GVJR6xw26hHQI\ndfSpk4wbFebNTakcOOxKdZeedKf7PI10BzPQqhzfd1Kob4XXTro2/NE6z+hjkNfU\nsv4REuUPjRUCgYEA6oBMwP0yPBu+aVzjRERbZC99I5/MbCJfKMEnH+SgnfzvhXNV\n2A7HbdWB05G44FXvA07m9dKWTYnPNcSRnN+C2Y3My5LSkjLcSDdSKLtP9OCHXVMX\nACZ3VL9XZXEZr6rlXURr73XrXA+90RNNkFKPKxZ3rHeEmZzb9P0w7wPnUZECgYA6\nW8P+uMB1EhpYNJts9uaRYTkRxy0elG/c+qU8fCa2R2VLNpomoRAkclsxgnfWzE0P\ne8vap4+Bg6GElr7t/JN0qYmHE167a8nMuBBZPrP69K9iYg7cH3wmIF89Utv+yGbP\ncwef5go5a335/+/sv8ZG90l8LYOM3hAwZX8o+U1fnQKBgQCSVQNvHCa+MBTXoB7r\n97QU/voxtNFtbIK8dwZDuGtzCWEzxkxXHoW3X0JMIJ+dtNfmJ4jHjPjB6Kqd/KuH\nblJO1JYHilaEWY0U1T5O/rKDX+kYytpNiPaLiIW6gOCJHj5sn9AYy/EyyYChjg0V\ndzjk5vHhv+BW0IYWlrTwDPaF7A==\n-----END PRIVATE KEY-----\n",
+  "client_email": "symbol-upload-service-account@luminous-inferno-5412.iam.gserviceaccount.com",
+  "client_id": "111943785576210216709",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/symbol-upload-service-account%40luminous-inferno-5412.iam.gserviceaccount.com"
+}
