@@ -40,16 +40,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
         
         self.tfPassword.setLeftImage(imageName: "password")
         
-        GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
-        
-        // Setup delegates
-        GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance().uiDelegate = self
-        // Attempt to sign in silently, this will succeed if
-        // the user has recently been authenticated
-        GIDSignIn.sharedInstance().signInSilently()
+//        GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
+//        
+//        // Setup delegates
+//        GIDSignIn.sharedInstance().delegate = self
+//        GIDSignIn.sharedInstance().uiDelegate = self
+//        // Attempt to sign in silently, this will succeed if
+//        // the user has recently been authenticated
+//        GIDSignIn.sharedInstance().signInSilently()
 
-        
+        GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().delegate = self
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -69,8 +71,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
             
             print("Wow, it works! with \(user.profile.name)")
             
-            let authentication: GIDAuthentication = user.authentication
-            let credential: FIRAuthCredential = FIRGoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+//            let authentication: GIDAuthentication = user.authentication
+//            let credential: FIRAuthCredential = FIRGoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+
+            let authentication = user.authentication
+            let credential = FIRGoogleAuthProvider.credential(withIDToken: (authentication?.idToken)!,
+                                                              accessToken: (authentication?.accessToken)!)
+            
             
             print(credential)
             
