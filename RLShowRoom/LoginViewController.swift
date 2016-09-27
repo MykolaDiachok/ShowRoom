@@ -13,6 +13,7 @@ import FirebaseAuth
 import GoogleSignIn
 import FBSDKCoreKit
 import FBSDKLoginKit
+import Social
 
 class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDelegate, GIDSignInUIDelegate {
 
@@ -24,7 +25,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
     @IBOutlet weak var btnEmailLogin: UIButton!
     @IBOutlet weak var btnLogOut: UIButton!
     
-    
+    //var ref: fir!
     
     
     
@@ -40,8 +41,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
         self.tfPassword.setLeftImage(imageName: "password")
         
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
+        
+        // Setup delegates
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
+        // Attempt to sign in silently, this will succeed if
+        // the user has recently been authenticated
+        GIDSignIn.sharedInstance().signInSilently()
 
         
         
@@ -68,17 +74,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
             
             print(credential)
             
-            FIRAuth.auth()?.signIn(with: credential) { (user, error) in
-                
-                if let error = error {
-                    print(error.localizedDescription)
-                    return
-                }
-                
-                print("Wow, it works in Firebase! with \(user?.displayName)")
-                
-                // ...
-            }
+           firebaseAuth(credential)
         }
     }
     
@@ -176,26 +172,34 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
     
     
     @IBAction func OnClickbtnFaceBook(_ sender: UIButton) {
+
         FBSDKProfile.enableUpdates(onAccessTokenChange: true)
         
-        let facebookLogin = FBSDKLoginManager()
-        facebookLogin.loginBehavior = FBSDKLoginBehavior(rawValue: 2)!
-        // if User cancelled Facebook auth change this string FBSDKLoginBehavior(rawValue: 2)!
+        let facebookLogin: FBSDKLoginManager = FBSDKLoginManager()
         
-        facebookLogin.logIn(withReadPermissions: ["public_profile", "email"], from: self){
+        facebookLogin.loginBehavior = FBSDKLoginBehavior.web
+        facebookLogin.logOut()
+        
+        facebookLogin.logIn(withReadPermissions: ["email"], from: self){
             (result, error) in
             if error != nil {
                 print("Unable to  auth in FaceBook - \(error)")
             } else if result?.isCancelled == true {
+                //print(FBSDKAccessToken.current().tokenString)
                 print("User cancelled Facebook auth")
-            }
-            else {
+            } else {
                 print("Successfully auth with FaceBook")
                 let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.firebaseAuth(credential)
             }
         }
     }
+    
+    
+
+    
+    
+    
     
     func firebaseAuth(_ credential: FIRAuthCredential)
     {
@@ -204,12 +208,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
                 print("Unable to auth with Firebase - \(error)");
             } else {
                 print("Successfully auth with Firebase")
+                print("Wow, it works in Firebase! with \(user?.displayName)")
             }
         })
     }
     
     
     @IBAction func onClickbtnLogOut(_ sender: UIButton) {
+        GIDSignIn.sharedInstance().signOut() // need add if google sign
         try! FIRAuth.auth()!.signOut()
     }
     
