@@ -39,7 +39,6 @@
 		69FEF8BB1D9677AE00B4E742 /* Exo2-SemiBoldCondensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 69FEF8A71D963DFF00B4E742 /* Exo2-SemiBoldCondensed.otf */; };
 		69FEF8BC1D9677AE00B4E742 /* Exo2-SemiBoldExpanded.otf in Resources */ = {isa = PBXBuildFile; fileRef = 69FEF8A81D963DFF00B4E742 /* Exo2-SemiBoldExpanded.otf */; };
 		69FEF8BD1D9677AE00B4E742 /* Exo2-ThinExpanded.otf in Resources */ = {isa = PBXBuildFile; fileRef = 69FEF8AA1D963DFF00B4E742 /* Exo2-ThinExpanded.otf */; };
-		69FEF8BE1D9677AE00B4E742 /* Exo2-BlackCondensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 69FEF8981D963DE400B4E742 /* Exo2-BlackCondensed.otf */; };
 		755A1554B84BD2F970FBFBDE /* Pods_RLShowRoomTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB0371E62AB7D64A00CEB65 /* Pods_RLShowRoomTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -388,7 +387,6 @@
 				69B792581D9A919E007D6DF4 /* GoogleService-Info.plist in Resources */,
 				6978CE651D955D3A00ED0E9A /* Exo2-ThinCondensed.otf in Resources */,
 				69FEF8BD1D9677AE00B4E742 /* Exo2-ThinExpanded.otf in Resources */,
-				69FEF8BE1D9677AE00B4E742 /* Exo2-BlackCondensed.otf in Resources */,
 				69E8C7D41D8C3DC50092F741 /* LaunchScreen.storyboard in Resources */,
 				69E8C7D11D8C3DC50092F741 /* Assets.xcassets in Resources */,
 				69E8C7CF1D8C3DC50092F741 /* Main.storyboard in Resources */,
@@ -664,6 +662,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 30AB5384D4CB3D1B92488911 /* Pods-RLShowRoom.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = RLShowRoom/RLShowRoom.entitlements;
 				DEVELOPMENT_TEAM = AG964J5992;
@@ -685,6 +684,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DC517E23E8C5CF9C7372F59C /* Pods-RLShowRoom.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = RLShowRoom/RLShowRoom.entitlements;
 				DEVELOPMENT_TEAM = AG964J5992;
